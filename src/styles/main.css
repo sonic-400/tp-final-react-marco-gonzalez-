@@ -1,0 +1,250 @@
+/* Variables globales de colores y tamaños */
+:root {
+  --max: 1100px;
+  --bg: #f7f8fc;
+  --texto: #1f2937;
+  --muted: #6b7280;
+  --color-principal: #e63946;  /* rojo principal */
+  --color-suave: #ffe5e7;      /* rojo claro */
+  --tarjeta: #fff;
+  --borde: #e5e7eb;
+}
+
+/* Ajuste general de box-sizing */
+* { box-sizing: border-box; }
+
+/* Fondo, fuente y color base del sitio */
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: url("https://www.chromethemer.com/download/hd-wallpapers/water-pokemon-3840x2160.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: var(--texto);
+}
+
+/* Links generales */
+a { color: var(--color-principal); text-decoration: none; }
+
+/* Contenedor principal */
+.container { max-width: var(--max); margin: 0 auto; padding: 16px; }
+
+/* Fuente */
+h1 { font-size: 28px; margin: 16px 0 10px; }
+h2 { font-size: 20px; margin: 22px 0 10px; }
+p { line-height: 1.6; }
+
+/* Nav */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--tarjeta);
+  border-bottom: 1px solid var(--borde);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+}
+
+.nav-marca {
+  font-weight: 800;
+  letter-spacing: .3px;
+  color: var(--texto);
+}
+
+nav .enlaces a {
+  margin-left: 12px;
+  color: var(--texto);
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+nav .enlaces a:hover {
+  background: var(--color-suave);
+}
+
+/* Home */
+.presentacion {
+  background: linear-gradient(180deg, #ffffff, #e9dede);
+  border: 1px solid var(--borde);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.05);
+}
+
+.presentacion span { color: var(--muted); }
+
+/* Botones principales */
+.botones {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.boton {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  border: 1px solid var(--color-principal);
+}
+
+.boton-rojo { background: var(--color-principal); color: #fff; }
+.boton-borde { background: transparent; color: var(--color-principal); }
+
+/* Chips de tecnologías */
+.tecnologias {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 14px 0;
+}
+
+.tecnologia {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: var(--color-suave);
+  color: var(--color-principal);
+  border: 1px solid var(--borde);
+}
+
+/* Bloques de texto e información */
+.bloque {
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+/* Pie de página */
+.pie {
+  margin: 28px 0 8px;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+/* ---------- Listado de pokémons ---------- */
+.grilla {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+}
+
+.tarjeta {
+  display: block;
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(0,0,0,.04);
+  transition: transform .08s ease, box-shadow .08s ease, border-color .08s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-suave);
+  box-shadow: 0 8px 24px rgba(0,0,0,.06);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+}
+
+.tarjeta h3 {
+  margin: 10px 0 0;
+  text-transform: capitalize;
+}
+
+/* ---------- Detalle del pokémon ---------- */
+.detalle {
+  background: rgba(255, 255, 255, 0.85);  /* fondo translúcido */
+  backdrop-filter: blur(6px);              /* efecto vidrio */
+  border: 1px solid var(--borde);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  display: grid;
+  gap: 18px;
+  align-items: center;
+}
+
+.detalle img {
+  width: 100%;
+  max-width: 320px;
+  justify-self: center;
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  padding: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}
+
+.detalle h1 {
+  margin: 0 0 6px 0;
+  text-transform: capitalize;
+}
+
+.detalle p {
+  margin: 6px 0;
+  color: var(--muted);
+}
+
+/* Botón para volver */
+.volver {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 8px 12px;
+  border: 1px solid var(--color-principal);
+  color: var(--color-principal);
+  border-radius: 10px;
+  background: rgba(255,255,255,.65);
+  backdrop-filter: blur(4px);
+  transition: transform .08s ease, box-shadow .12s ease, background .12s ease;
+}
+
+.volver:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.06);
+  background: rgba(255,255,255,.9);
+}
+
+/* Mini etiquetas de tipo (si se usan) */
+.tipos {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 6px 0 10px 0;
+}
+
+.tipo {
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--color-suave);
+  border: 1px solid var(--borde);
+  color: var(--color-principal);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .detalle { grid-template-columns: 320px 1fr; }
+}
+
+/* Botón fav */
+.boton-fav {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  color: #bbb;
+}
+
+.boton-fav.activo { color: var(--color-principal); }
