@@ -2,7 +2,9 @@ import { Link } from "react-router-dom";
 
 export default function Home({ favoritos }) {
   return (
+    
     <div className="container">
+      
       {/* Encabezado principal */}
       <div className="presentacion">
         <span>TP Final · React + Vite</span>
