@@ -18,3 +18,5 @@ npm run dev
 npm run build
 npm run preview
 ```
+
+Quise hacerlo con github pages pero no pude tuve errores constantes de error 404, asi que unicamente voy a subir el repositorio
