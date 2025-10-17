@@ -19,4 +19,5 @@ npm run build
 npm run preview
 ```
 
-Quise hacerlo con github pages pero no pude tuve errores constantes de error 404, asi que unicamente voy a subir el repositorio
+Quise hacerlo con github pages pero no pude tuve errores constantes de error 404, asi que unicamente voy a subir el repositorio.
+Bueno tambien vi que habia formas de poder traducir lo que la api de pokemon tiraba, ya que tiraba los detalles/atributos en ingles pero no llegué a eso, por ahi haciendo un storm=tormenta, por ejemplo, asi una lista de todas las palabras que te tira y esa seria una forma de traducirla, pero bueno repito no llegue a eso, así que los detalles de los pokemon me quedaron flojos, si estuvo buenisimo lo de pok favorito.
